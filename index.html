@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Climate Change Awareness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: lightblue;
+        }
+
+        header {
+            background: #333;
+            color: blue;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: lightblue;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        #hero {
+            height: 100vh;
+            background: url('images/climate-background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content .btn {
+            background: #28a745;
+            color: lightblue;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.3s;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .hero-content .btn:hover {
+            background: #218838;
+        }
+
+        #learn-more {
+            padding: 50px;
+            text-align: center;
+        }
+
+        #learn-more h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #impact {
+            padding: 50px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .responsive-img, .responsive-video {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        footer {
+            background: lightblue;
+            color: blue;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label, form input, form textarea, form button {
+            margin: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#learn-more">About</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Animation -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Act Now, Save Tomorrow</h1>
+            <p>Tackling Climate Change Together</p>
+            <a href="#learn-more" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Climate Change -->
+    <section id="learn-more">
+        <h2>What is Climate Change?</h2>
+        <p>Climate change refers to long-term changes in temperature, precipitation, and other atmospheric conditions. Human activity, particularly the burning of fossil fuels, has accelerated climate change at an unprecedented rate.</p>
+    </section>
+
+    <!-- Impact Section with Video and Image -->
+    <section id="impact">
+        <h2>The Impact of Climate Change</h2>
+        <video controls class="https://youtu.be/Exq7Rppq90I">
+            <source src="videos/climate-change.mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="https://i.pinimg.com/564x/ec/c9/97/ecc9970ca2eabd38565df06ab1df6cca.jpg" alt="Melting ice due to climate change" class="responsive-img">
+        <p>Climate change is leading to rising sea levels, extreme weather events, and melting ice caps.</p>
+    </section>
+
+    <!-- Contact Section with Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Climate Change Awareness. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll to sections
+        document.querySelector('.btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('#learn-more').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
